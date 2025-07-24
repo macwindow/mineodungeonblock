@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "MineoDungeonBlockChromev3",
+  "version": "1.0",
+  "description": "マイネオダンジョン不具合回避",
+	"permissions" : [
+			"webRequest",
+			"declarativeNetRequest"
+	],
+	"host_permissions" : [
+		"*://dungeon.king.mineo.jp/"
+	],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": false,
+        "path": "ruleset1.json"
+      }
+    ]
+  },
+    "background" : {
+        "service_worker" : "service_worker.js"
+    }
+}
