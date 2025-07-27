@@ -1,25 +1,25 @@
 {
-	"manifest_version": 3,
-	"name": "MineoDungeonBlockMV3",
-	"version": "7.27.1",
-	"description": "マイネオ マイネ王サイト 王国ダンジョンの2024年8月から発生しているクリアできない不具合を回避します。locale ja",
-	"permissions" : [
-		"webRequest",
-		"declarativeNetRequest"
-	],
-	"host_permissions" : [
-		"*://dungeon.king.mineo.jp/"
-	],
-	"declarative_net_request": {
-		"rule_resources": [
-		  {
-			"id": "ruleset_1",
-			"enabled": false,
-			"path": "ruleset1.json"
-		  }
-		]
-	},
-    "background" : {
-        "service_worker" : "service_worker.js"
-    }
+  "manifest_version": 3,
+  "name": "MineoDungeonBlockMV3",
+  "version": "7.27.1",
+  "description": "マイネオ マイネ王サイト 王国ダンジョンの2024年8月から発生しているクリアできない不具合を回避します。locale ja",
+  "permissions" : [
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+  "host_permissions" : [
+    "*://dungeon.king.mineo.jp/"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+      "id": "ruleset_1",
+      "enabled": false,
+      "path": "ruleset1.json"
+      }
+    ]
+  },
+  "background" : {
+    "service_worker" : "service_worker.js"
+  }
 }
