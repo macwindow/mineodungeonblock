@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MineoDungeonBlockMV3",
-  "version": "7.27.1",
+  "version": "7.27.2",
   "description": "マイネオ マイネ王サイト 王国ダンジョンの2024年8月から発生しているクリアできない不具合を回避します。locale ja",
   "permissions" : [
     "webRequest",

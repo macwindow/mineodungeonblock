@@ -1,20 +1,24 @@
+const dems = 950; 
+const secondms = 1050 - dems; 
 const sleep = (time) => new Promise((r) => setTimeout(r, time));
 var isblocking = false;
 var issecondblock = false;
 var prebeforedt = Date.now();
-console.log("mdunblockMV3,start " + isblocking + ",," + issecondblock + ",," + prebeforedt);
+console.log("mdunblock,start " + isblocking + ",," + issecondblock + ",," + prebeforedt);
+console.log("mdunblock,dems " + dems + ",secondms," + secondms  );
 
 async function mdunBlockLite(requestDetails) {
-  const dems = 960; 
   chrome.declarativeNetRequest.updateEnabledRulesets( {enableRulesetIds: ["ruleset_1"] })
   isblocking = true;
   let pt = Date.now();
   diffpt = pt - prebeforedt;
   let sleeptime = dems - diffpt;  
+  console.log("mdunblock,sleeptime " + sleeptime);
   await sleep(sleeptime);	
   if (issecondblock == true) {
-    await sleep(100);	
-    sleeptime += 100;
+	console.log("mdunblock,2nd sleeptime " + secondms);
+    await sleep(secondms);	
+    sleeptime += secondms;
   }
   chrome.declarativeNetRequest.updateEnabledRulesets( {disableRulesetIds: ["ruleset_1"] })
   isblocking = false;
